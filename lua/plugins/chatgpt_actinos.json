@@ -1,0 +1,30 @@
+{
+  "explain_word": {
+    "type": "chat",
+    "opts": {
+      "title": " Explain words",
+      "template": "請用繁體中文解釋以下單詞或片語，並使用 Markdown 格式。請同時提供該單詞或片語在原文中的一些例句，以幫助理解其用法。請確保例句清晰、準確地反映了單詞或片語的意義。\n\n單詞或片語：\n```\n{{input}}\n```\n\n例句：",
+      "strategy": "display",
+      "params": {
+        "model": "gpt-3.5-turbo",
+        "stop": [
+          "```"
+        ]
+      }
+    }
+  },
+  "translate_sentence": {
+    "type": "chat",
+    "opts": {
+      "title": " Translate sentence",
+      "strategy": "display",
+      "template": "請將以下英文句子翻譯成繁體中文，並使用 Markdown 格式。請確保翻譯準確且流暢，保留原句子的意義和語境。\n\n英文句子：\n```\n{{input}}\n```",
+      "params": {
+        "model": "gpt-3.5-turbo",
+        "stop": [
+          "```"
+        ]
+      }
+    }
+  }
+}
